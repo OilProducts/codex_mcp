@@ -1,3 +1,18 @@
+Metadata-Version: 2.4
+Name: codex-async-mcp
+Version: 0.1.0
+Summary: Async MCP client wrapper around `codex mcp serve`
+Author: Codex User
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: fastmcp>=2.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.23; extra == "dev"
+
 # Codex Async MCP
 
 Codex Async MCP wraps the `codex mcp serve` CLI so you can run Codex coding agents as long-lived background jobs through the Model Context Protocol (MCP). It launches the Codex server over stdio, relays streaming events, and exposes them via FastMCP so any MCP-compatible client can supervise and steer Codex remotely.
